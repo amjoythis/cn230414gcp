@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My search tool</title>
+    <!--
+    <script src="search.js"></script>
+    -->
+</head>
+<body>
+<form id="id_form_search"
+      action="/search"
+>
+    <fieldset>
+        <legend>Search for...</legend>
+        <label for="id_text_search_exp">Search expression:</label>
+        <input type="text"
+               id="id_text_search_exp"
+               placeholder="search for something"
+               size="64"
+               name="q"
+        >
+        <br>
+        <input type="button"
+               id="id_btn_search"
+               value="go search"
+               hidden
+        >
+        <input type="submit" value="go search">
+    </fieldset>
+    <hr>
+    <section id="id_section_search_feedback"></section>
+</form>
+</body>
+</html>
