@@ -17,7 +17,11 @@ function boot(){
     oFormSearch = id(ID_FORM_SEARCH);
     oCheckResultsInSamePage = id(ID_CHECK_RESULTS_IN_SAME_PAGE)
 
-    relevant = [oTextSearchExp, oBtnSearch, oSectionSearchFeedback]
+    relevant = [
+        oTextSearchExp,
+        oBtnSearch,
+        // oSectionSearchFeedback // conditional, not vital
+    ]
 
     for (r of relevant){
         if (r==null){
@@ -25,7 +29,7 @@ function boot(){
             return;
         }
     }//for
-    window.alert("All relevant objects available. Proceeding.");
+    // window.alert("All relevant objects available. Proceeding.");
 
     oFormSearch.onsubmit = oBtnSearch.onclick = go_search;
 }//boot

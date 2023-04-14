@@ -31,15 +31,18 @@
             <br>
             <input type="submit" value="go search">
         </fieldset>
-        <hr>
-        {% if r is defined %}
-        <section id="id_section_search_feedback"></section>
-        <ol>
-        {% for thing in r %}
-            <li><a href="{{ thing['href'] }}">{{ thing['anchor'] }}</a></li>
-        {% endfor %}
-        </ol>
-        {% endif %}
     </form>
+
+    <hr>
+
+    {% if r is defined %}
+    <section id="id_section_search_feedback"></section>
+    <ol>
+    {% for thing in r %}
+        <li><a href="{{ thing['href'] }}">{{ thing['anchor'] }}</a></li>
+    {% endfor %}
+    </ol>
+    {% endif %}
+
 </body>
 </html>
